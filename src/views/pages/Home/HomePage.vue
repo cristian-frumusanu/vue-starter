@@ -1,6 +1,6 @@
 <template>
     <div class="container  container--main  text-center">
-        <img src="@/assets/img/vue_ts.jpg" alt="" class="my-5 image-round-borders" />
+        <img src="@/assets/img/vue_ts.jpg" alt="" class="mb-5 image-round-borders" />
         <HelloWorld />
     </div>
 </template>
