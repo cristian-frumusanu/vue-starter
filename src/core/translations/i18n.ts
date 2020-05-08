@@ -2,9 +2,8 @@ import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import axios from 'axios';
 
-import messages from './strings/index';
-
 import { TranslationsAPI } from '@/core/api/api-translations';
+import messages from './strings/index';
 
 // Internationalization
 Vue.use(VueI18n);
@@ -12,7 +11,7 @@ Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: 'it', // set locale
   fallbackLocale: 'it',
-  messages // set locale messages
+  messages, // set locale messages
 });
 
 export default i18n;
@@ -42,7 +41,7 @@ export const loadLanguageAsync = (language: string) => {
 
   // If the language hasn't been loaded yet
   return TranslationsAPI.loadTranslations(language)
-    .then((response: any) => {
+    .then((response) => {
       i18n.setLocaleMessage(language, response.data);
       loadedLanguages.push(language);
       return setI18nLanguage(language);

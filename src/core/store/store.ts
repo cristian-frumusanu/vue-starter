@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import * as Action from './types/action-types';
-import { AuthenticationAPI } from '../api/api-authentication';
+import AuthenticationAPI from '../api/api-authentication';
 import { ILoginModel } from '../models/login';
 
 interface AppState {

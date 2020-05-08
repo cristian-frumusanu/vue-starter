@@ -1,7 +1,7 @@
-import { stringsEN } from './strings-en';
+import stringsEN from './strings-en';
 
 const strings = {
-  stringsEN
+  stringsEN,
 };
 
 export default strings;

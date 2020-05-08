@@ -1,11 +1,9 @@
 const stringsEN = {
   general: {
     ok: 'OK',
-    cancel: 'Cancel'
+    cancel: 'Cancel',
   },
-  hello: 'Hello'
+  hello: 'Hello',
 };
 
-export {
-  stringsEN
-};
+export default stringsEN;
