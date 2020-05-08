@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { vm } from '@/main';
 import * as Action from './types/action-types';
 import { AuthenticationAPI } from '../api/api-authentication';
 import { ILoginModel } from '../models/login';
@@ -13,7 +12,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isLoading: null,
+    isLoading: false,
   },
 
   mutations: {
@@ -27,7 +26,7 @@ export default new Vuex.Store({
 
     [Action.API_FAIL](state: AppState, error = 'Generic APP error') {
       state.isLoading = false;
-      vm.$showAlert(error);
+      alert(error);
     }
   },
 

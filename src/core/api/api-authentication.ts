@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios';
 import { axiosInstance } from '../utilities/axios-instance';
 
 import { ILoginModel } from '../models/login';

@@ -23,7 +23,9 @@ const setI18nLanguage = (lang: string) => {
   i18n.locale = lang;
   axios.defaults.headers.common['Accept-Language'] = lang;
 
+  // @ts-ignore
   document.querySelector('html').setAttribute('lang', lang);
+
   return lang;
 };
 
