@@ -1,11 +1,13 @@
+import { RouteConfig } from 'vue-router';
 import MainWrapper from '@/views/containers/MainWrapper.vue';
 import { APP_TITLE } from '../utilities/appconsts';
-import { RouteConfig } from 'vue-router';
 
-const HomePage =
-  () => import( /* webpackChunkName: "page-homepage" */ '@/views/pages/Home/HomePage.vue');
+const HomePage = () =>
+  import(
+    /* webpackChunkName: "page-homepage" */ '@/views/pages/Home/HomePage.vue'
+  );
 
-export const routes: Array<RouteConfig> = [
+const routes: Array<RouteConfig> = [
   {
     path: '/',
     redirect: '/homepage',
@@ -16,9 +18,11 @@ export const routes: Array<RouteConfig> = [
         name: 'homepage',
         component: HomePage,
         meta: {
-          title: `${APP_TITLE} - Home`
-        }
-      }
-    ]
-  }
+          title: `${APP_TITLE} - Home`,
+        },
+      },
+    ],
+  },
 ];
+
+export default routes;

@@ -5,5 +5,4 @@ import HelloWorld from '@/components/HelloWorld/HelloWorld.vue';
 @Component({
   components: { HelloWorld },
 })
-export default class HomePage extends Vue {
-}
+export default class HomePage extends Vue {}

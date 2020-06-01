@@ -9,10 +9,10 @@ import {
   ModalPlugin,
   VBModal,
   SpinnerPlugin,
-  ProgressPlugin
+  ProgressPlugin,
 } from 'bootstrap-vue';
 
-const initBootstrap = (vue) => {
+const initBootstrap = vue => {
   vue.use(NavbarPlugin);
   vue.use(LayoutPlugin);
   vue.use(CardPlugin);

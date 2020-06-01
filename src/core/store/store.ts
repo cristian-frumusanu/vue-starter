@@ -27,25 +27,26 @@ export default new Vuex.Store({
     [Action.API_FAIL](state: AppState, error = 'Generic APP error') {
       state.isLoading = false;
       alert(error);
-    }
+    },
   },
 
   actions: {
     [Action.LOGIN]({ commit }, loginData: ILoginModel) {
-      return new Promise(async (resolve, reject) => {
+      return new Promise((resolve, reject) => {
         commit(Action.API_REQUEST);
 
-        try {
-          await AuthenticationAPI.authenticate(loginData);
-          commit(Action.API_SUCCESS);
-          resolve();
-        } catch (error) {
-          commit(Action.API_FAIL, error);
-          reject(error);
-        }
+        AuthenticationAPI.authenticate(loginData)
+          .then(() => {
+            commit(Action.API_SUCCESS);
+            resolve();
+          })
+          .catch(error => {
+            commit(Action.API_FAIL, error);
+            reject(error);
+          });
       });
-    }
+    },
   },
 
-  getters: {}
+  getters: {},
 });

@@ -41,12 +41,12 @@ export const loadLanguageAsync = (language: string) => {
 
   // If the language hasn't been loaded yet
   return TranslationsAPI.loadTranslations(language)
-    .then((response) => {
+    .then(response => {
       i18n.setLocaleMessage(language, response.data);
       loadedLanguages.push(language);
       return setI18nLanguage(language);
     })
-    .catch((error) => {
+    .catch(error => {
       alert(`Loading language ${language} failed`);
       console.log(error);
     });

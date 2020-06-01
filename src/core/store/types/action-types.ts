@@ -4,10 +4,4 @@ const API_FAIL = 'API_FAIL';
 
 const LOGIN = 'LOGIN';
 
-export {
-  API_REQUEST,
-  API_SUCCESS,
-  API_FAIL,
-
-  LOGIN
-};
+export { API_REQUEST, API_SUCCESS, API_FAIL, LOGIN };
